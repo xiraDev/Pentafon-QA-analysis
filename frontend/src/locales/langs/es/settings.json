@@ -1,0 +1,14 @@
+{
+    "settings": "Configuración",
+    "reset": "Restablecer",
+    "close": "Cerrar",
+    "dark_mode": "Modo Oscuro",
+    "contrast": "Contraste",
+    "compact": "Compacto",
+    "compact_tooltip": "Solo en el dashboard y disponible en resoluciones grandes > 1600px (xl)",
+    "exit": "Salir",
+    "full_screen": "Pantalla completa",
+    "nav": "Navegación",
+    "only_dashboard": "Solo en el dashboard",
+    "layout": "Diseño"
+}

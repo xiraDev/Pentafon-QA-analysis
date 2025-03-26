@@ -1,0 +1,14 @@
+{
+    "settings": "Settings",
+    "reset": "Reset",
+    "close": "Close",
+    "dark_mode": "Dark mode",
+    "contrast": "Contrast",
+    "compact": "Compact",
+    "compact_tooltip": "Dashboard only and available at large resolutions > 1600px (xl)",
+    "exit": "Exit",
+    "full_screen": "Full screen",
+    "nav": "Nav",
+    "only_dashboard": "Dashboard only",
+    "layout": "Layout"
+}

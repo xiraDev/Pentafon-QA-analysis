@@ -1,0 +1,35 @@
+module.exports = {
+  apps: [
+    {
+      name: "Template Analyze QA Frontend",
+      script: "frontend.sh",
+      cwd: "/home/ec2-user/template-analyze-qa/frontend/",
+      interpreter: "bash",
+      instances: "1",
+      exec_mode: "fork",
+      autorestart: false,
+      max_memory_restart: "2048M",
+      log_date_format: "YYYY-MM-DDTHH:mm:ssZ",
+      error_file: "~/.pm2/logs/Template Analyze QA Frontend-err.log",
+      out_file: "~/.pm2/logs/Template Analyze QA Frontend-out.log",
+      log_file: "~/.pm2/logs/Template Analyze QA Frontend-combined.log",
+    },
+    {
+      name: "Template Analyze QA Backend",
+      script: "src/app.js",
+      cwd: "/home/ec2-user/template-analyze-qa/backend/",
+      instances: "1",
+      exec_mode: "fork",
+      autorestart: true,
+      max_restarts: 10,
+      max_memory_restart: "2048M",
+      log_date_format: "YYYY-MM-DDTHH:mm:ssZ",
+      node_args: "-r dotenv/config",
+      env: { NODE_ENV: "production",
+        PORT: 5011 },
+      error_file: "~/.pm2/logs/Template Analyze QA Backend-err.log",
+      out_file: "~/.pm2/logs/Template Analyze QA Backend-out.log",
+      log_file: "~/.pm2/logs/Template Analyze QA Backend-combined.log",
+    }
+  ],
+};

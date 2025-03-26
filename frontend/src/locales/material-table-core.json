@@ -1,0 +1,44 @@
+{
+    "body": {
+    "emptyDataSourceMessage": "No hay datos disponibles",
+    "filterRow": {
+        "filterTooltip": "Filtrar"
+    },
+    "deleteTooltip": "Eliminar",
+    "editTooltip": "Editar",
+    "editRow": {
+        "deleteText": "¿Estás seguro de querer eliminarlo?",
+        "cancelTooltip": "Cancelar",
+        "saveTooltip": "Aceptar"
+    }
+    },
+    "toolbar": {
+    "searchTooltip": "Buscar",
+    "searchPlaceholder": "Buscar",
+    "addRemoveColumns": "Agregar o quitar columnas",
+    "showColumnsTitle": "Mostrar columnas",
+    "showColumnsAriaLabel": "Mostrar columnas",
+    "exportTitle": "Exportar",
+    "exportAriaLabel": "Exportar"
+    },
+    "header": {
+    "actions": "Acciones"
+    },
+    "grouping": {
+    "placeholder": "Arrastra los encabezados aquí para agruparlos por...",
+    "groupedBy": "Agrupados por"
+    },
+    "pagination": {
+    "labelDisplayedRows": "{from}-{to} de {count}",
+    "labelRows": "Filas",
+    "labelRowsPerPage": "Filas por página",
+    "firstAriaLabel": "Primera",
+    "firstTooltip": "Primera",
+    "previousAriaLabel": "Primera",
+    "previousTooltip": "Anterior",
+    "nextAriaLabel": "Siguiente",
+    "nextTooltip": "Siguiente",
+    "lastAriaLabel": "Última",
+    "lastTooltip": "Última"
+    }
+}
