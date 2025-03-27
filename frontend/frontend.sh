@@ -1,7 +1,7 @@
 #!/bin/bash
 
 TARGET_DIR="/var/www/pentafon-qa-analysis/html/"
-SOURCE_DIR="/home/ec2-user/pentafon-qa-analysis/frontend/dist/"
+SOURCE_DIR="/home/ubuntu/pentafon-qa-analysis/frontend/dist/"
 
 echo "Preparando directorio de destino: $TARGET_DIR"
 

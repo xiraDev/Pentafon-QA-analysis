@@ -3,7 +3,7 @@ module.exports = {
     {
       name: "Pentafon QA Analysis Frontend",
       script: "frontend.sh",
-      cwd: "/home/ec2-user/pentafon-qa-analysis/frontend/",
+      cwd: "/home/ubuntu/pentafon-qa-analysis/frontend/",
       interpreter: "bash",
       instances: "1",
       exec_mode: "fork",
@@ -17,7 +17,7 @@ module.exports = {
     {
       name: "Pentafon QA Analysis Backend",
       script: "src/app.js",
-      cwd: "/home/ec2-user/pentafon-qa-analysis/backend/",
+      cwd: "/home/ubuntu/pentafon-qa-analysis/backend/",
       instances: "1",
       exec_mode: "fork",
       autorestart: true,

@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /home/ec2-user/pentafon-qa-analysis  # Cambia esto a la ubicación de tu proyecto en EC2
+    destination: /home/ubuntu/pentafon-qa-analysis  # Cambia esto a la ubicación de tu proyecto en EC2
 
 hooks:
   BeforeInstall:
@@ -12,12 +12,12 @@ hooks:
   AfterInstall:
     - location: scripts/install_dependencies.sh
       timeout: 300
-      runas: ec2-user
+      runas: ubuntu
   ApplicationStart:
     - location: scripts/start_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: ubuntu
   ApplicationStop:
     - location: scripts/stop_server.sh
       timeout: 300
-      runas: ec2-user
+      runas: ubuntu
