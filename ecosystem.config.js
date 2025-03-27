@@ -1,23 +1,23 @@
 module.exports = {
   apps: [
     {
-      name: "Template Analyze QA Frontend",
+      name: "Pentafon QA Analysis Frontend",
       script: "frontend.sh",
-      cwd: "/home/ec2-user/template-analyze-qa/frontend/",
+      cwd: "/home/ec2-user/pentafon-qa-analysis/frontend/",
       interpreter: "bash",
       instances: "1",
       exec_mode: "fork",
       autorestart: false,
       max_memory_restart: "2048M",
       log_date_format: "YYYY-MM-DDTHH:mm:ssZ",
-      error_file: "~/.pm2/logs/Template Analyze QA Frontend-err.log",
-      out_file: "~/.pm2/logs/Template Analyze QA Frontend-out.log",
-      log_file: "~/.pm2/logs/Template Analyze QA Frontend-combined.log",
+      error_file: "~/.pm2/logs/Pentafon QA Analysis Frontend-err.log",
+      out_file: "~/.pm2/logs/Pentafon QA Analysis Frontend-out.log",
+      log_file: "~/.pm2/logs/Pentafon QA Analysis Frontend-combined.log",
     },
     {
-      name: "Template Analyze QA Backend",
+      name: "Pentafon QA Analysis Backend",
       script: "src/app.js",
-      cwd: "/home/ec2-user/template-analyze-qa/backend/",
+      cwd: "/home/ec2-user/pentafon-qa-analysis/backend/",
       instances: "1",
       exec_mode: "fork",
       autorestart: true,
@@ -27,9 +27,9 @@ module.exports = {
       node_args: "-r dotenv/config",
       env: { NODE_ENV: "production",
         PORT: 5011 },
-      error_file: "~/.pm2/logs/Template Analyze QA Backend-err.log",
-      out_file: "~/.pm2/logs/Template Analyze QA Backend-out.log",
-      log_file: "~/.pm2/logs/Template Analyze QA Backend-combined.log",
+      error_file: "~/.pm2/logs/Pentafon QA Analysis Backend-err.log",
+      out_file: "~/.pm2/logs/Pentafon QA Analysis Backend-out.log",
+      log_file: "~/.pm2/logs/Pentafon QA Analysis Backend-combined.log",
     }
   ],
 };
