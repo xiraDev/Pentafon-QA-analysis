@@ -11,6 +11,6 @@ npm install
 echo "Entro a Frontend"
 cd /home/ubuntu/pentafon-qa-analysis/frontend/
 npm install
-# npm run build
+npm run build
 
 EOF
