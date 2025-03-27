@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Variables
-FRONTEND_CONF="/etc/nginx/sites-available/template-analyze-qa-Frontend"
-BACKEND_CONF="/etc/nginx/sites-available/template-analyze-qa-Backend"
-FRONTEND_SYMLINK="/etc/nginx/sites-enabled/template-analyze-qa-Frontend"
-BACKEND_SYMLINK="/etc/nginx/sites-enabled/template-analyze-qa-Backend"
+FRONTEND_CONF="/etc/nginx/sites-available/pentafon-qa-analysis-Frontend"
+BACKEND_CONF="/etc/nginx/sites-available/pentafon-qa-analysis-Backend"
+FRONTEND_SYMLINK="/etc/nginx/sites-enabled/pentafon-qa-analysis-Frontend"
+BACKEND_SYMLINK="/etc/nginx/sites-enabled/pentafon-qa-analysis-Backend"
 CHANGES_MADE=0
 
 # Función para crear archivo si no existe
@@ -39,10 +39,10 @@ create_symlink_if_missing() {
 FRONTEND_CONFIG=$(cat <<EOL
 server {
     listen 80;
-    server_name template-analyze-qa.xira.services; 
+    server_name pentafon-qa-analysis.xira.services; 
 
     location / {
-        root /var/www/template-analyze-qa/html/;
+        root /var/www/pentafon-qa-analysis/html/;
         index index.html index.htm;
         proxy_http_version 1.1;
         proxy_set_header Upgrade \$http_upgrade;
@@ -59,7 +59,7 @@ EOL
 BACKEND_CONFIG=$(cat <<EOL
 server {
     listen 80;
-    server_name template-analyze-qa-back.xira.services;
+    server_name pentafon-qa-analysis-back.xira.services;
 
     location / {
         proxy_pass http://localhost:5011;  
