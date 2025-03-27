@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo -u ec2-user bash << EOF
-cd /home/ec2-user/template-analyze-qa
+sudo -u ubuntu bash << EOF
+cd /home/ubuntu/pentafon-qa-analysis
 pm2 restart ecosystem.config.js
 
 EOF
