@@ -435,6 +435,9 @@ const PromptEditor = () => {
                   hideFooterPagination
                   processRowUpdate={handleRowUpdateEvaluationFormat}
                   onProcessRowUpdateError={handleProcessRowUpdateError}
+                  localeText={{
+                    noRowsLabel: "No hay registros disponibles", // Mensaje cuando la tabla está vacía
+                  }}
                 />
                 <Button variant="outlined" onClick={() => addNewRow('evaluationFormat')}>
                   Añadir Categoría
@@ -463,6 +466,9 @@ const PromptEditor = () => {
                   hideFooterPagination
                   processRowUpdate={handleRowUpdateSpecialCases}
                   onProcessRowUpdateError={handleProcessRowUpdateError}
+                  localeText={{
+                    noRowsLabel: "No hay registros disponibles", // Mensaje cuando la tabla está vacía
+                  }}
                 />
                 <Button variant="outlined" onClick={() => addNewRow('specialCases')}>
                   Añadir Categoría
@@ -491,6 +497,9 @@ const PromptEditor = () => {
                   hideFooterPagination
                   processRowUpdate={handleRowUpdatecriticalErrors}
                   onProcessRowUpdateError={handleProcessRowUpdateError}
+                  localeText={{
+                    noRowsLabel: "No hay registros disponibles", // Mensaje cuando la tabla está vacía
+                  }}
                 />
                 <Button variant="outlined" onClick={() => addNewRow('criticalErrors')}>
                   Añadir Categoría
