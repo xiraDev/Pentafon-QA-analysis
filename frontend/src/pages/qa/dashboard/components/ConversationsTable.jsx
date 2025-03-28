@@ -27,17 +27,17 @@ const ConversationsTable = () => {
   const columns = useMemo(
     () => [
       { accessorKey: 'id', header: 'Id de interacción' },
-      { accessorKey: 'fileName', header: 'Nombre del Archivo' },
-      { accessorKey: 'campaign', header: 'campaign' },
+      { accessorKey: 'fileName', header: 'Nombre del archivo' },
+      { accessorKey: 'campaign', header: 'Campaña' },
       { accessorKey: 'agentName', header: 'Nombre del agente' },
       { accessorKey: 'customerName', header: 'Nombre del cliente' },
       {
         accessorKey: 'createdAt',
-        header: 'Fecha de Creación',
+        header: 'Fecha de creación',
         Cell: ({ cell }) => new Date(cell.getValue()).toLocaleString(),
       },
       {
-        header: 'Ver Conversación',
+        header: 'Ver conversación',
         Cell: ({ row }) => (
           <Button
             variant="outlined"
@@ -51,7 +51,7 @@ const ConversationsTable = () => {
         ),
       },
       {
-        header: 'Resultado de Análisis',
+        header: 'Resultado de análisis',
         accessorKey: 'analysisResult',
         Cell: ({ row }) =>
           row.original.analysisResult ? (
@@ -88,11 +88,17 @@ const ConversationsTable = () => {
     [setAnalysisResults, setIsAnalysisDialogOpen]
   );
 
+  const localization = {
+    noRecordsToDisplay: "No hay registros disponibles",  // Mensaje cuando la tabla está vacía
+    rowsPerPage: "Filas por página"
+  };
+
   // Usamos useMaterialReactTable() para obtener la instancia de la tabla
   const tableInstance = useMaterialReactTable({
     columns,
     data,
     state: { isLoading },
+    localization,
     getRowId: (row) => row.id, // Esto ayuda a que MaterialReactTable identifique cada fila
   });
 

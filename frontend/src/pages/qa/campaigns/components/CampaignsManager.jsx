@@ -127,6 +127,11 @@ const CampaignTable = () => {
                 </IconButton>
                 </Box>
               )}
+              localization={{
+                noRecordsToDisplay: "No hay registros para mostrar",
+                actions: "Acciones", // Cambia el header de la columna de acciones
+                rowsPerPage: "Filas por página"
+              }}
             />
             <Box mt={2}>
               <Button variant="contained" onClick={() => setIsAdding(true)}>

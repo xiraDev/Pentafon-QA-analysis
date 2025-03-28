@@ -197,11 +197,11 @@ export default function UserNewEditForm({ isEdit, currentUser }) {
                 placeholder={t('column_role')}
                 InputLabelProps={{ shrink: true }}
               >
-                <MenuItem value="">None</MenuItem>
+                <MenuItem value="">{t("None")}</MenuItem>
                 <Divider sx={{ borderStyle: 'dashed' }} />
                 {USER_ROLES.map((option) => (
                   <MenuItem key={option.code} value={option.code}>
-                    {option.label}
+                    {t(option.label)}
                   </MenuItem>
                 ))}
               </Field.Select>

@@ -50,7 +50,7 @@ export default function UserTableRow({ row, selected, campaignSlugs, onDeleteRow
       <TableCell align="left">{email}</TableCell>
 
       <TableCell align="left" sx={{ textTransform: 'capitalize' }}>
-        {role?.role}
+        {t(role?.role)}
       </TableCell>
       <TableCell align="left">{campaignSlugs}</TableCell>
       <TableCell align="center">

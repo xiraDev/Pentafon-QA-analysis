@@ -50,7 +50,7 @@ export default function UserTableToolbar({ filterName, filterRole, onFilterName,
               textTransform: 'capitalize',
             }}
           >
-            {option}
+            {t(option)}
           </MenuItem>
         ))}
       </TextField>
